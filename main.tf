@@ -112,6 +112,7 @@ resource "aws_iam_role_policy" "iam_emr_service_policy" {
         "Effect": "Allow",
         "Resource": "*",
         "Action": [
+          "elasticmapreduce:*",
           "ec2:*",
           "glue:*",
           "s3:*"

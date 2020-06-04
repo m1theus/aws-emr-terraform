@@ -16,9 +16,9 @@ resource "aws_emr_cluster" "cluster" {
 
   ec2_attributes {
     key_name                          = "uncrxd-key"
-    subnet_id                         = "subnet-0f62c577d6e320352"
-    emr_managed_master_security_group = "sg-037587d6b83e5fd9e"
-    emr_managed_slave_security_group  = "sg-037587d6b83e5fd9e"
+    subnet_id                         = "subnet-08adfaaee1b688f6c"
+    emr_managed_master_security_group = "sg-0cfe8d8da550c18c2"
+    emr_managed_slave_security_group  = "sg-0cfe8d8da550c18c2"
     instance_profile                  = "arn:aws:iam::478784202550:instance-profile/emr_profile1"
   }
 
