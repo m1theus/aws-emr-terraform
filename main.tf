@@ -122,6 +122,12 @@ resource "aws_iam_role_policy" "iam_emr_service_policy" {
 EOF
 }
 
+resource "aws_iam_policy_attachment" "emr-full-access" {
+  name       = "emr-full-access"
+  roles      = ["${aws_iam_role.iam_emr_service_role.name}"]
+  policy_arn = "arn:aws:iam::aws:policy/AmazonElasticMapReduceFullAccess"
+}
+
 # IAM Role for EC2 Instance Profile
 resource "aws_iam_role" "iam_emr_profile_role" {
   name = "iam_emr_profile_role"
